@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>480</width>
+    <height>270</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="horizontalSpacing">
+     <number>6</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="CustomTreeView" name="treeView">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::ActionsContextMenu</enum>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOn</enum>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustToContents</enum>
+      </property>
+      <property name="autoScrollMargin">
+       <number>16</number>
+      </property>
+      <property name="tabKeyNavigation">
+       <bool>true</bool>
+      </property>
+      <property name="dragEnabled">
+       <bool>true</bool>
+      </property>
+      <property name="dragDropMode">
+       <enum>QAbstractItemView::InternalMove</enum>
+      </property>
+      <property name="defaultDropAction">
+       <enum>Qt::MoveAction</enum>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>true</bool>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectItems</enum>
+      </property>
+      <property name="indentation">
+       <number>20</number>
+      </property>
+      <property name="rootIsDecorated">
+       <bool>false</bool>
+      </property>
+      <property name="itemsExpandable">
+       <bool>false</bool>
+      </property>
+      <property name="sortingEnabled">
+       <bool>true</bool>
+      </property>
+      <attribute name="headerStretchLastSection">
+       <bool>true</bool>
+      </attribute>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>480</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuPlik">
+    <property name="title">
+     <string>Plik</string>
+    </property>
+    <addaction name="actionImportPwd"/>
+    <addaction name="actionSavePwd"/>
+    <addaction name="actionExportPwd"/>
+    <addaction name="separator"/>
+    <addaction name="actionClose"/>
+   </widget>
+   <widget class="QMenu" name="menuEdycja">
+    <property name="title">
+     <string>Edycja</string>
+    </property>
+    <addaction name="actionLoginPwdPair_add"/>
+    <addaction name="actionLoginPwdPair_remove"/>
+    <addaction name="actionLoginPwdPair_edit"/>
+    <addaction name="separator"/>
+    <addaction name="actionClearPwd"/>
+    <addaction name="separator"/>
+    <addaction name="actionGenerateRandomPwd"/>
+   </widget>
+   <widget class="QMenu" name="menuPomoc">
+    <property name="title">
+     <string>Pomoc</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuWidok">
+    <property name="title">
+     <string>Widok</string>
+    </property>
+    <widget class="QMenu" name="menuPrzenie_has_o">
+     <property name="title">
+      <string>Przenieś hasło...</string>
+     </property>
+     <addaction name="actionMovePwd_rowUp"/>
+     <addaction name="actionMovePwd_rowDown"/>
+    </widget>
+    <addaction name="actionTogglePwdVisibility"/>
+    <addaction name="menuPrzenie_has_o"/>
+   </widget>
+   <addaction name="menuPlik"/>
+   <addaction name="menuWidok"/>
+   <addaction name="menuEdycja"/>
+   <addaction name="menuPomoc"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionImportPwd"/>
+   <addaction name="actionSavePwd"/>
+   <addaction name="actionExportPwd"/>
+   <addaction name="separator"/>
+   <addaction name="actionTogglePwdVisibility"/>
+   <addaction name="actionMovePwd_rowUp"/>
+   <addaction name="actionMovePwd_rowDown"/>
+   <addaction name="separator"/>
+   <addaction name="actionLoginPwdPair_add"/>
+   <addaction name="actionLoginPwdPair_remove"/>
+   <addaction name="actionLoginPwdPair_edit"/>
+   <addaction name="actionClearPwd"/>
+   <addaction name="actionGenerateRandomPwd"/>
+   <addaction name="separator"/>
+   <addaction name="actionAbout"/>
+   <addaction name="separator"/>
+   <addaction name="actionClose"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionImportPwd">
+   <property name="icon">
+    <iconset theme="folder-open" resource="../resources.qrc">
+     <normaloff>:/resources/icons/file-import-solid.svg</normaloff>:/resources/icons/file-import-solid.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Importuj hasła...</string>
+   </property>
+   <property name="toolTip">
+    <string>Importuj plik z hasłami</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSavePwd">
+   <property name="icon">
+    <iconset theme="document-save" resource="../resources.qrc">
+     <normaloff>:/resources/icons/floppy-disk-solid.svg</normaloff>:/resources/icons/floppy-disk-solid.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Zapisz</string>
+   </property>
+   <property name="toolTip">
+    <string>Zapisz</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionExportPwd">
+   <property name="icon">
+    <iconset theme="document-save-as" resource="../resources.qrc">
+     <normaloff>:/resources/icons/file-export-solid.svg</normaloff>:/resources/icons/file-export-solid.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Eksportuj hasła...</string>
+   </property>
+   <property name="toolTip">
+    <string>Eksportuj hasła do wybranego pliku</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/resources/icons/square-xmark-solid.svg</normaloff>:/resources/icons/square-xmark-solid.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Zakończ</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+F4</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/resources/icons/circle-info-solid.svg</normaloff>:/resources/icons/circle-info-solid.svg</iconset>
+   </property>
+   <property name="text">
+    <string>O programie...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+  <action name="actionLoginPwdPair_add">
+   <property name="icon">
+    <iconset theme="list-add" resource="../resources.qrc">
+     <normaloff>:/resources/icons/plus-solid.svg</normaloff>:/resources/icons/plus-solid.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Dodaj parę login-hasło</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Ins</string>
+   </property>
+  </action>
+  <action name="actionLoginPwdPair_remove">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/resources/icons/minus-solid.svg</normaloff>:/resources/icons/minus-solid.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Usuń parę login-hasło</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Del</string>
+   </property>
+  </action>
+  <action name="actionLoginPwdPair_edit">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/resources/icons/pen-solid.svg</normaloff>:/resources/icons/pen-solid.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Edytuj login/hasło</string>
+   </property>
+   <property name="toolTip">
+    <string>Edytuj login/hasło</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Return</string>
+   </property>
+  </action>
+  <action name="actionTogglePwdVisibility">
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/resources/icons/eye-solid.svg</normaloff>:/resources/icons/eye-solid.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Pokaż hasła</string>
+   </property>
+   <property name="toolTip">
+    <string>Pokaż hasła</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+8, Ctrl+*</string>
+   </property>
+  </action>
+  <action name="actionMovePwd">
+   <property name="text">
+    <string>Przenieś hasło...</string>
+   </property>
+   <property name="toolTip">
+    <string>Przenieś hasło...</string>
+   </property>
+  </action>
+  <action name="actionClearPwd">
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/resources/icons/broom-solid.svg</normaloff>:/resources/icons/broom-solid.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Wyczyść listę haseł</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Del</string>
+   </property>
+  </action>
+  <action name="actionGenerateRandomPwd">
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/resources/icons/dice-solid.svg</normaloff>:/resources/icons/dice-solid.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Generuj losowe hasło</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+G</string>
+   </property>
+  </action>
+  <action name="actionMovePwd_rowUp">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/resources/icons/circle-up-solid.svg</normaloff>:/resources/icons/circle-up-solid.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Wiersz wyżej</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Up</string>
+   </property>
+  </action>
+  <action name="actionMovePwd_rowDown">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/resources/icons/circle-down-solid.svg</normaloff>:/resources/icons/circle-down-solid.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Wiersz niżej</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Down</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CustomTreeView</class>
+   <extends>QTreeView</extends>
+   <header>headers/customtreeview.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/resources">
+        <file>icons/broom-solid.svg</file>
+        <file>icons/circle-down-solid.svg</file>
+        <file>icons/circle-info-solid.svg</file>
+        <file>icons/circle-up-solid.svg</file>
+        <file>icons/dice-solid.svg</file>
+        <file>icons/eye-slash-solid.svg</file>
+        <file>icons/eye-solid.svg</file>
+        <file>icons/file-export-solid.svg</file>
+        <file>icons/file-import-solid.svg</file>
+        <file>icons/floppy-disk-solid.svg</file>
+        <file>icons/lock-solid.svg</file>
+        <file>icons/minus-solid.svg</file>
+        <file>icons/pen-solid.svg</file>
+        <file>icons/plus-solid.svg</file>
+        <file>icons/square-xmark-solid.svg</file>
+        <file>icons/bipass-logo.svg</file>
+        <file>icons/copy-solid.svg</file>
+    </qresource>
+</RCC>
